@@ -39,7 +39,7 @@ const Skills = () => (
             transitionSpeed={1000}
             gyroscope={true}
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full">
+            <div className="grid grid-cols-2 gap-3 w-full">
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
@@ -50,7 +50,7 @@ const Skills = () => (
                     alt={`${skill.name} logo`}
                     className="w-6 h-6 sm:w-8 sm:h-8"
                   />
-                  <span className="text-xs sm:text-sm text-gray-300">
+                  <span className="text-xs sm:text-sm text-gray-300 break-words text-center">
                     {skill.name}
                   </span>
                 </div>

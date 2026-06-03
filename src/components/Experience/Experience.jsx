@@ -48,11 +48,11 @@ const Experience = () => {
               {/* Flex container for image and text */}
               <div className="flex items-center space-x-6">
                 {/* Company Logo/Image */}
-                <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
+                <div className="w-20 h-16 bg-white rounded-md overflow-hidden">
                   <img
                     src={experience.img}
                     alt={experience.company}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full "//object-cover
                   />
                 </div>
 
