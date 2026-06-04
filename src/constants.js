@@ -43,12 +43,17 @@ import Quantela from './assets/company_logo/Quantela-Logo.png';
 import Webuters from './assets/company_logo/Webuters-Logo.png';
 
 // Education Section Logo's
-import glaLogo from './assets/education_logo/gla_logo.png';
-import bsaLogo from './assets/education_logo/bsa_logo.png';
+import ukLogo from './assets/education_logo/uk_logo.png';
+import utuLogo from './assets/education_logo/utu_logo.png';
 import vpsLogo from './assets/education_logo/vps_logo.png';
 
 // Project Section Logo's
 import githubdetLogo from './assets/work_logo/github_det.png';
+import shubTubeLogo from './assets/work_logo/Shub-Tube.png';
+import swiggyLogo from './assets/work_logo/Swiggy_Logo.png';
+import todoListLogo from './assets/work_logo/TodoList_Logo.png';
+import contactusLogo from './assets/work_logo/contact_Logo.png';
+import DashboardLogo from './assets/work_logo/Dashboard_Logo.png';
 import csprepLogo from './assets/work_logo/cs_prep.png';
 import movierecLogo from './assets/work_logo/movie_rec.png';
 import taskremLogo from './assets/work_logo/task_rem.png';
@@ -197,44 +202,128 @@ export const SkillsInfo = [
   export const education = [
     {
       id: 0,
-      img: glaLogo,
-      school: "GLA University, Mathura",
-      date: "Sept 2022 - July 2024",
-      grade: "7.81 CGPA",
-      desc: "I have completed my Master's degree (MCA) in Computer Applications from GLA University, Mathura. During my time at GLA, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at GLA University has been instrumental in shaping my technical abilities and professional growth.",
-      degree: "Master of Computer Applications - MCA",
+      img: utuLogo,
+      school: "Uttarakhand Technical University",
+      date: "Aug 2015 - July 2019",
+      grade: "65.6%",
+      desc: "Completed a Bachelor's degree in Computer Science from Uttarakhand Technical University, Dehradun, gaining a strong foundation in software development, data structures, databases, web technologies, and problem-solving through academic projects and practical learning.",
+      degree: "Bachelor of Computer Science - B.Tech",
     },
     {
       id: 1,
-      img: bsaLogo,
-      school: "BSA College, Mathura",
-      date: "Sept 2018 - Aug 2021",
-      grade: "73.2%",
-      desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from BSA College, Mathura. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at BSA College allowed me to work on projects that applied theoretical concepts to real-world problems.",
-      degree: "Bachelor of Science - BSC (Computer Science)",
+      img: ukLogo,
+      school: "M.P.H.I.C, UK Board, Ramnagar",
+      date: "Apr 2014 - March 2015",
+      grade: "76%",
+      desc: "I completed my class 12 education from M.P.H.I.C, Ramnagar, under the Uk board, where I studied Physics, Chemistry, and Mathematics (PCM).",
+      degree: "Uk Board(XII) - PCMe",
     },
     {
       id: 2,
-      img: vpsLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2017 - March 2018",
-      grade: "78%",
-      desc: "I completed my class 12 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-      degree: "CBSE(XII) - PCM with Computer Science",
-    },
-    {
-      id: 3,
-      img: vpsLogo,
-      school: "Vatsalya Public School Govardhan, Mathura",
-      date: "Apr 2015 - March 2016",
+      img: ukLogo,
+      school: "M.P.H.I.C, UK Board, Ramnagar",
+      date: "Apr 2012 - March 2013",
       grade: "87.5%",
-      desc: "I completed my class 10 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Science with Computer.",
-      degree: "CBSE(X), Science with Computer Application",
+      desc: "I completed my class 10 education from M.P.H.I.C, Ramnagar, under the Uk board, where I studied Science.",
+      degree: "Uk Board(X), Science",
     },
   ];
   
   export const projects = [
     {
+      id: 0,
+      title: "Shub-Tube",
+      description:
+        "Shub-Tube is a YouTube-inspired video streaming platform built with React.js, featuring video browsing, search functionality, responsive UI, and dynamic content rendering. The application is deployed on Vercel and provides a seamless user experience across devices.",
+      image: shubTubeLogo,
+      tags: ["HTML", "CSS", "JavaScript", "React JS", "API", "Vercel"],
+      github: "https://github.com/ShubhamJoshi1998/youtubeClone",
+      webapp: "https://shub-tube.vercel.app/",
+    },
+    {
+      id: 1,
+      title: "Swiggy-Clone",
+      description:
+        "A full-stack quiz-based platform designed for GATE/UGC NET students to practice previous year questions and create customized tests. The platform offers comprehensive profile stats and detailed results, helping students track and improve their preparation journey effectively.",
+      image: swiggyLogo,
+      tags: ["React JS", "HTML", "CSS", "JavaScript","API","Vercel"],
+      github: "https://github.com/ShubhamJoshi1998/Swiggy_Clone",
+      webapp: "https://sj-swiggy-clone.vercel.app/",
+    },
+    {
+      id: 2,
+      title: "User Authentication Portal",
+      description:
+        "A modern full-stack authentication web application built using React.js, Node.js, Express.js, and SQL.This project provides secure user authentication with signup/login functionality, responsive UI, backend APIs, and database integration.",
+      image: movierecLogo,
+      tags: ["React JS", "Node.js", "Express.js", "SQL", "HTML", "CSS", "JavaScript", "Vercel"],
+      github: "https://github.com/ShubhamJoshi1998/fullstack-authentication",
+      webapp: "https://fullstack-authentication-tau.vercel.app/",
+    },
+    {
+      id: 3,
+      title: "Business Intelligence Dashboard",
+      description:
+        "Designed and developed a modern Analytics Dashboard UI using React.js, HTML, CSS, and JavaScript, inspired by Business Intelligence (BI) tools. Implemented interactive KPI cards, charts, data tables, filters, and responsive layouts to visualize analytical data and provide meaningful business insights through an intuitive user interface.",
+      image: DashboardLogo,
+      tags: ["React JS","HTML", "CSS", "NPM","JavaScript", "Vercel"],
+      github: "https://github.com/ShubhamJoshi1998/Human_Resource_For_Health",
+      webapp: "https://human-resource-for-health.vercel.app/",
+    },
+    {
+      id: 4,
+      title: "Task Manager (Todo List App)",
+      description:
+        "Developed a responsive Todo List application using React.js, leveraging Hooks such as useState and useEffect for state management and lifecycle handling. Implemented task creation, editing, deletion, completion tracking, and event handling to provide an intuitive and interactive user experience. Focused on component reusability, clean UI design, and efficient state updates.",
+      image: todoListLogo,
+      tags: ["JavaScript", "Hooks", "HTML", "CSS", "Vercel"],
+      github: "https://github.com/ShubhamJoshi1998/todoList",
+      webapp: "https://todo-list-mu-black-17.vercel.app/",
+    },
+    {
+      id: 5,
+      title: "Contact Management System",
+      description:
+        "A modern and responsive Contact Us Form built using React.js for the frontend and Firebase as the backend database. This project allows users to submit their queries, which are securely stored in Firebase for further processing.",
+      image: contactusLogo,
+      tags: ["React JS", "Firebase", "HTML", "CSS", "JavaScript", "Vercel"],
+      github: "https://github.com/ShubhamJoshi1998/ContactUs",
+      webapp: "https://contact-us-beta-steel.vercel.app/",
+    },
+    /*{
+      id: 6,
+      title: "Coding Master",
+      description:
+        "An ed-tech platform where users can access tech and coding-related blogs, notes, interview questions, e-books, and premium content with payment integration. Built with full-stack technologies for a seamless learning experience.",
+      image: cmLogo,
+      tags: ["React JS", "Node.js", "MongoDB", "Express", "Payment Integration"],
+      github: "https://codingmasterweb.in/",
+      webapp: "https://codingmasterweb.in/",
+    },
+    {
+      id: 7,
+      title: "Image Search App",
+      description:
+        "A React.js-based image search application that allows users to search and download high-quality images from the web. Built using external APIs to ensure a vast library of results for various queries.",
+      image: imagesearchLogo,
+      tags: ["React JS", "API", "Search Feature", "CSS", "Javascript"],
+      github: "https://github.com/codingmastr/Image-Search-App",
+      webapp: "https://imagsearch.netlify.app/",
+    },
+    {
+      id: 8,
+      title: "Image Background Remover",
+      description:
+        "An efficient background removal app built with React.js and API integration. Users can upload any image, remove the background, and download the transparent version for further use.",
+      image: removebgLogo,
+      tags: ["React JS", "API", "Image Processing", "HTML", "CSS", "Javascript"],
+      github: "https://github.com/codingmastr/Image-Background-Remover",
+      webapp: "https://removeyourbg.netlify.app/",
+    },*/
+  ];  
+
+  /*
+{
       id: 0,
       title: "GitHub Profile Detective",
       description:
@@ -325,3 +414,4 @@ export const SkillsInfo = [
       webapp: "https://removeyourbg.netlify.app/",
     },
   ];  
+  */

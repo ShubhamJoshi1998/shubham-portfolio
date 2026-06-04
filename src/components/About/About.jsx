@@ -2,6 +2,7 @@ import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import Tilt from "react-parallax-tilt";
 import profileImage from "../../assets/profile2.png";
+import sjprofile from "../../assets/profile3.jpg";
 
 const About = () => {
   return (
@@ -26,8 +27,7 @@ const About = () => {
             <ReactTypingEffect
               text={[
                 "Fullstack Developer",
-                "App Developer",
-                "UI/UX Designer",
+                "Web Developer",
                 "Coder",
               ]}
               speed={100}
@@ -74,8 +74,8 @@ const About = () => {
             gyroscope={true}
           >
             <img
-              src={profileImage}
-              alt="Tarun Kaushik"
+              src={sjprofile}
+              alt="Shubham Joshi"
               className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
             />
           </Tilt>
