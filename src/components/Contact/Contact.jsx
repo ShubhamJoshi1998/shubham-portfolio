@@ -1,49 +1,47 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false);
+  const whatsappNumber = "919557760934"; // Replace with your WhatsApp number in international format without +
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_axbtt7a",  // Replace with your EmailJS Service ID
-        "template_1ziboq3",  // Replace with your EmailJS Template ID
-        form.current,
-        "Rz7W9pVF0HdDryNNL"  // Replace with your EmailJS Public Key
-      )
-      .then(
-        () => {
-          setIsSent(true);
-          form.current.reset(); // Reset form fields after sending
-          toast.success("Message sent successfully! ✅", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        },
-        (error) => {
-          console.error("Error sending message:", error);
-          toast.error("Failed to send message. Please try again.", {
-            position: "top-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-          });
-        }
-      );
+    const formData = new FormData(form.current);
+    const name = formData.get("user_name") || "";
+    const email = formData.get("user_email") || "";
+    const subject = formData.get("subject") || "";
+    const message = formData.get("message") || "";
+
+    const text = `Hello, I am ${name}. Subject: ${subject}. Email: ${email}. Message: ${message}`;
+    const whatsappAppUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(text)}`;
+    const whatsappWebUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isIos = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (isAndroid) {
+      const intentUrl = `intent://send?phone=${whatsappNumber}&text=${encodeURIComponent(text)}#Intent;scheme=whatsapp;package=com.whatsapp;end`;
+      window.location.href = intentUrl;
+    } else if (isIos) {
+      window.location.href = whatsappAppUrl;
+    } else {
+      window.open(whatsappWebUrl, "_blank");
+    }
+
+    form.current.reset();
+
+    toast.success("Opening WhatsApp...", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "dark",
+    });
   };
 
   return (

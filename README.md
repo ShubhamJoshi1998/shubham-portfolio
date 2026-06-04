@@ -48,12 +48,9 @@ npm start
 npm run build
 ```
 
-## 📹 YouTube Tutorial
 
-Watch the full build on YouTube:
-📺 [React Portfolio Website - 85K+ Views](https://youtu.be/ypSc8HEurGQ?si=winjJhc9qzNrCqLD)
 
 ## 🌟 Credits
 
-This project was created with ❤️ by [Tarun Kaushik](https://tarunkaushik.vercel.app/).
+This project was created with ❤️ by [Shubham Joshi](https://shubhamjportfolio.netlify.app/).
 If you like it, feel free to ⭐ this repository and share!
